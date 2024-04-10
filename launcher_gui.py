@@ -12,7 +12,7 @@ class LauncherGUI():
         app.geometry("400x500")
         app.title("LethalBeats - Minecraft Launcher")
         app.resizable(False, False)
-        app.iconbitmap(default='hide_icon.ico')
+        app.iconbitmap(default='./assets/icon0.ico')
 
         self.app = app
         self.__load_launcher_options()
@@ -23,7 +23,7 @@ class LauncherGUI():
         self.updateInstalledDisplay()
 
     def __logo_display(self):
-        logo = customtkinter.CTkImage(light_image=Image.open('./lb_logo.png'), size=(320, 190))
+        logo = customtkinter.CTkImage(light_image=Image.open('./assets/lb_logo.png'), size=(320, 190))
         image_label = customtkinter.CTkLabel(self.app, image=logo, text="")
         image_label.pack(side='top', pady=(20, 0))
 
